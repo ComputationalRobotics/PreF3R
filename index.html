@@ -227,12 +227,17 @@
 <section class="section">
   <div class="container is-max-desktop">
 
+    <h2 class="title is-3">Examples</h2>
+    <div class="content has-text-justified">
+      <p>
+        Left: Frames rendered by <span class="dnerf">PreF3R</span>. Right: Ground-truth video.
+      </p>
+    </div>
     <div class="columns is-centered">
 
       <!-- Visual Effects. -->
       <div class="column">
         <div class="content">
-          <h2 class="title is-3">Example 1</h2>
 
           <video id="221" autoplay controls muted loop playsinline height="100%">
             <source src="./static/videos/221_all.mp4"
@@ -245,26 +250,27 @@
       <!-- Matting. -->
       <div class="column">
         <div class="content">
-          <h2 class="title is-3">Example 2</h2>
-
+          <!-- <h2 class="title is-3"> - </h2>
+          <div class="content has-text-justified">
+            <p>
+               -
+            </p>
+          </div> -->
             <video id="215" autoplay controls muted loop playsinline height="100%">
               <source src="./static/videos/215_all.mp4"
                       type="video/mp4">
             </video>
-          <!-- </div> -->
 
         </div>
       </div>
     </div>
-    <!--/ Matting. -->
 
     <!-- Method. -->
     <div class="columns is-centered">
       <div class="column is-full-width">
         <h2 class="title is-3">Method Overview</h2>
 
-        <!-- Interpolating. -->
-        <!-- <h3 class="title is-4">Interpolating states</h3> -->
+        <!-- Method. -->
         <div class="content has-text-justified">
           <p>
             <span class="dnerf">PreF3R</span>'s overall architecture. An ordered set of unposed images is fed into <span class="dnerf">PreF3R</span> sequentially. At timestamp t, the input frame is first encoded by a ViT-encoder, and then decoded into the query feature by the Target Decoder. The Target Decoder is intertwined with the Reference Decoder through cross-attention. Simultaneously, the query feature of the previous frame queries the memory bank to produce the fused feature, which the Reference Decoder decodes into the output feature. The output feature is then processed by the Gaussian Head and the Point Head to produce pixel-aligned Gaussian primitives.
@@ -344,11 +350,14 @@
 <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
     <h2 class="title">BibTeX</h2>
-    <pre><code>@article{chen2024pref3r,
-      title   = {PF3plat: Pose-Free Feed-Forward 3D Gaussian Splatting},
-      author  = {Chen, Zequn and Yang, Jiezhi and Yang, Heng},
-      journal = {arXiv preprint arXiv:2411.16877},
-      year    = {2024}
+    <pre><code>@misc{chen2024pref3rposefreefeedforward3d,
+      title={PreF3R: Pose-Free Feed-Forward 3D Gaussian Splatting from Variable-length Image Sequence}, 
+      author={Zequn Chen and Jiezhi Yang and Heng Yang},
+      year={2024},
+      eprint={2411.16877},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV},
+      url={https://arxiv.org/abs/2411.16877}, 
 }</code></pre>
   </div>
 </section>
